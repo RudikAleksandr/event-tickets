@@ -8,39 +8,16 @@
       <a routerLink="" class="admin__exit-link">Exit</a>
     </div>
   </header>
-  <main class="row admin__main">
-    <aside class="col-2 admin__aside">
+  <aside class="col-2 admin__aside">
       <ul class="admin__aside-list-link">
         <li *ngFor="let item of asideLinks">
-            <a routerLink="#" routerLinkActive="active" class="admin__item-aside-link">{{item}}</a>
+            <a routerLink={{item.link}} routerLinkActive="admin__active-link" class="admin__item-aside-link">{{item.value}}</a>
         </li>
       </ul>
-    </aside>
+  </aside>
+  <main class="row admin__main">
     <section class="col-10 admin__content">
-      <ul class="admin__categories-list">
-        <li *ngFor="let item of eventCategories" class="admin__item-categories">{{item}}</li>
-      </ul>
-      <div class="admin__content-filter">
-        <input type="text" name="search-events" class="admin__search-events" placeholder="Search by event information">
-        <a routerLink="#" class="admin__btn-add-event btn btn-success">Add event</a>
-      </div>
-      <div class="admin__content-events">
-        <div *ngFor="let price of [10, 20, 30, 40, 50, 50, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,40,40,40,40,40,40,40,40,40,40,40,40,40]" class="admin__data-event" >
-          <a routerLink="#" class="admin__link-event">
-            <img src="./../../../assets/images/event-picture.jpg" alt="event pictupe" class="admin__img-event">
-          </a>
-          <div class="admin__event-bottom">
-              <div>
-                  <span class="admin__price-event">{{price}}</span>
-                  <span class="admin__price-currency">BYN</span>
-              </div>
-              <div class="group-button">
-                  <a routerLink="#" class="button-edit">Edit</a>
-                  <button class="button-remove">x</button>
-              </div>
-          </div>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </section>
     <footer class="col-10 admin__footer">
       <a href="https://github.com/RudikAleksandr" target="_blank">@RudikAleksandr</a>
@@ -49,5 +26,3 @@
 
 
 </section>
-
-<router-outlet></router-outlet>

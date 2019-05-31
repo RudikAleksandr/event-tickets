@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  private asideLinks: Array<string> = ['Events', 'Orders', 'Calendar'];
-  private eventCategories: Array<string> = ['All events', 'Сoncert', 'Food', 'Business', 'Theater'];
+  private asideLinks: Array<Object> = [
+    {link: 'events', value: 'Events'},
+    {link: 'orders', value: 'Orders'},
+    {link: 'calendar', value: 'Calendar'},
+  ];
   constructor() {
 
   }

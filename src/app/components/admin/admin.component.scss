@@ -1,19 +1,12 @@
 $heightHeader: 75px;
+$heightFooter: 70px;
+$marginTopFooter: 25px;
 
 a:hover {
   text-decoration: none;
 }
 
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
 //============================== ADMIN HEADER ================================
-.admin {
-  height: 100vh;
-}
-
 .admin__header {
   position: fixed;
   left: 0;
@@ -59,7 +52,7 @@ ul {
 //============================== ADMIN MAIN ================================
 .admin__main {
   margin-top: $heightHeader;
-  height: calc(100% - #{$heightHeader});
+  height: calc(100vh - #{$heightHeader});
   justify-content: flex-end;
 }
 
@@ -84,126 +77,15 @@ ul {
   font-size: 1.2em;
 }
 
-.admin__item-aside-link:hover {
+.admin__item-aside-link:hover,
+.admin__active-link {
   color: #d84933;
 }
 
 //============================== ADMIN CONTENT ================================
 .admin__content {
+  min-height: calc(100vh - #{$heightHeader} - #{$heightFooter} - #{$marginTopFooter});
   padding: 0 30px;
-}
-
-//============================== ADMIN CATEGORIES LIST ================================
-.admin__categories-list {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  margin-top: 15px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-}
-
-.admin__item-categories {
-  padding: 9px 20px;
-  color: white;
-  background-color: #ec6666;
-  border: 1px solid #aaa;
-  border-left: none;
-  cursor: pointer;
-}
-
-.admin__item-categories:nth-of-type(1) {
-  border-left: 1px solid #aaa;
-}
-
-.admin__item-categories:hover {
-  background-color: #c23c3c;
-}
-
-//============================== ADMIN CONTENT FILTER ================================
-.admin__content-filter {
-  display: flex;
-  justify-content: space-between;
-}
-
-.admin__search-events {
-  width: 50%;
-  padding: 5px 0;
-  padding-left: 40px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  background: url('../../../assets/images/icons/icon-search.png') no-repeat scroll 4px 4px rgba(0, 0, 0, 0);
-}
-
-//============================== ADMIN CONTENT EVENTS ================================
-$heightDataEvent: 266px;
-$heightLinkEvent: 230px;
-
-.admin__content-events {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.admin__data-event {
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  height: $heightDataEvent;
-  width: 185px;
-}
-
-.admin__link-event {
-  display: block;
-  display: flex;
-  align-items: center;
-  height: $heightLinkEvent;
-  border-bottom: 3px solid #ec6666;
-
-}
-
-.admin__img-event {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 0;
-}
-
-.admin__price-event {
-  color: green;
-  margin-right: 7px;
-}
-
-.group-button {
-  display: flex;
-  height: 100%;
-}
-
-.admin__event-bottom {
-  padding-left: 7px;
-  height: $heightDataEvent - $heightLinkEvent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.admin__event-bottom button {
-  color: #fff;
-  border: 0;
-}
-
-.button-remove {
-  padding: 0px 15px;
-  background-color: #dc3545;
-}
-
-.button-edit {
-  padding: 0px 12px;
-  padding-top: 5px;
-  color: white;
-  background-color: #bbb;
 }
 
 //============================== ADMIN FOOTER ================================
@@ -212,8 +94,8 @@ $heightLinkEvent: 230px;
   justify-content: center;
   align-items: center;
   height: 70px;
-  background-color: #fbfafa;
+  background-color:#fbfafa;
   border-top: 1px solid #e1e0de;
-  margin-top: 25px;
+  margin-top: $marginTopFooter;
   text-decoration: underline;
 }

@@ -1,0 +1,26 @@
+<section class="events-list">
+  <ul class="events-list__categories-list">
+      <li *ngFor="let item of eventCategories" class="events-list__item-categories">{{item}}</li>
+    </ul>
+    <div class="events-list__content-filter">
+      <input type="text" name="search-events" class="events-list__search-events" placeholder="Search by event information">
+      <a routerLink="#" class="events-list__btn-add-event btn btn-success">Add event</a>
+    </div>
+    <div class="events-list__content-events">
+      <div *ngFor="let price of [10, 20, 30, 40, 50, 50, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,40,40,40,40,40,40,40,40,40,40,40,40,40]" class="events-list__data-event" >
+        <a routerLink="event-content" class="events-list__link-event">
+          <img src="./../../../assets/images/event-picture.jpg" alt="event pictupe" class="events-list__img-event">
+        </a>
+        <div class="events-list__event-bottom">
+            <div>
+                <span class="events-list__price-event">{{price}}</span>
+                <span class="events-list__price-currency">BYN</span>
+            </div>
+            <div class="events-list__group-btn">
+                <a routerLink="#" class="events-list__btn-edit">Edit</a>
+                <button class="events-list__btn-remove">x</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
