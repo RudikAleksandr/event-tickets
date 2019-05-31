@@ -1,0 +1,219 @@
+$heightHeader: 75px;
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+//============================== ADMIN HEADER ================================
+.admin {
+  height: 100vh;
+}
+
+.admin__header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: $heightHeader;
+  width: 100vw;
+  padding: 8px 0;
+  padding-right: 20px;
+  align-items: center;
+  border-bottom: 3px solid #e1e0de;
+  z-index: 1;
+  background-color: white;
+}
+
+.admin__col-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.admin__logo {
+  width: 110px;
+  height: 55px;
+}
+
+.admin__title {
+  text-align: center;
+}
+
+.admin__exit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin__exit-link {
+  color: white;
+  padding: 4px 28px;
+  border: 1px solid #999;
+  border-radius: 7px;
+  background-color: #dd4f39;
+  font-size: 1.2em;
+}
+
+//============================== ADMIN MAIN ================================
+.admin__main {
+  margin-top: $heightHeader;
+  height: calc(100% - #{$heightHeader});
+  justify-content: flex-end;
+}
+
+//============================== ADMIN ASIDE ================================
+.admin__aside {
+  position: fixed;
+  left: 0;
+  top: $heightHeader;
+  padding: 0;
+  height: 100%;
+  border-right: 1px solid #bbb;
+  background-color: #f5f2f0;
+  z-index: 1;
+}
+
+.admin__item-aside-link {
+  border-bottom: 1px solid #aaa;
+  display: block;
+  padding: 20px 0;
+  padding-left: 33%;
+  color: #696664;
+  font-size: 1.2em;
+}
+
+.admin__item-aside-link:hover {
+  color: #d84933;
+}
+
+//============================== ADMIN CONTENT ================================
+.admin__content {
+  padding: 0 30px;
+}
+
+//============================== ADMIN CATEGORIES LIST ================================
+.admin__categories-list {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-top: 15px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.admin__item-categories {
+  padding: 9px 20px;
+  color: white;
+  background-color: #ec6666;
+  border: 1px solid #aaa;
+  border-left: none;
+  cursor: pointer;
+}
+
+.admin__item-categories:nth-of-type(1) {
+  border-left: 1px solid #aaa;
+}
+
+.admin__item-categories:hover {
+  background-color: #c23c3c;
+}
+
+//============================== ADMIN CONTENT FILTER ================================
+.admin__content-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin__search-events {
+  width: 50%;
+  padding: 5px 0;
+  padding-left: 40px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background: url('../../../assets/images/icons/icon-search.png') no-repeat scroll 4px 4px rgba(0, 0, 0, 0);
+}
+
+//============================== ADMIN CONTENT EVENTS ================================
+$heightDataEvent: 266px;
+$heightLinkEvent: 230px;
+
+.admin__content-events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.admin__data-event {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: $heightDataEvent;
+  width: 185px;
+}
+
+.admin__link-event {
+  display: block;
+  display: flex;
+  align-items: center;
+  height: $heightLinkEvent;
+  border-bottom: 3px solid #ec6666;
+
+}
+
+.admin__img-event {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.admin__price-event {
+  color: green;
+  margin-right: 7px;
+}
+
+.group-button {
+  display: flex;
+  height: 100%;
+}
+
+.admin__event-bottom {
+  padding-left: 7px;
+  height: $heightDataEvent - $heightLinkEvent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin__event-bottom button {
+  color: #fff;
+  border: 0;
+}
+
+.button-remove {
+  padding: 0px 15px;
+  background-color: #dc3545;
+}
+
+.button-edit {
+  padding: 0px 12px;
+  padding-top: 5px;
+  color: white;
+  background-color: #bbb;
+}
+
+//============================== ADMIN FOOTER ================================
+.admin__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #fbfafa;
+  border-top: 1px solid #e1e0de;
+  margin-top: 25px;
+  text-decoration: underline;
+}
