@@ -1,10 +1,6 @@
 $heightHeader: 75px;
+$marginTopMain: $heightHeader + 15px;
 $heightFooter: 70px;
-$marginTopFooter: 25px;
-
-a:hover {
-  text-decoration: none;
-}
 
 //============================== ADMIN HEADER ================================
 .admin__header {
@@ -51,8 +47,8 @@ a:hover {
 
 //============================== ADMIN MAIN ================================
 .admin__main {
-  margin-top: $heightHeader;
-  height: calc(100vh - #{$heightHeader});
+  margin-top: $marginTopMain;
+  min-height: calc(100vh - #{$marginTopMain} - #{$heightFooter});
   justify-content: flex-end;
 }
 
@@ -84,18 +80,18 @@ a:hover {
 
 //============================== ADMIN CONTENT ================================
 .admin__content {
-  min-height: calc(100vh - #{$heightHeader} - #{$heightFooter} - #{$marginTopFooter});
   padding: 0 30px;
+  margin-bottom: 20px;
 }
 
 //============================== ADMIN FOOTER ================================
 .admin__footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  text-align: center;
   align-items: center;
   height: 70px;
   background-color:#fbfafa;
   border-top: 1px solid #e1e0de;
-  margin-top: $marginTopFooter;
   text-decoration: underline;
 }

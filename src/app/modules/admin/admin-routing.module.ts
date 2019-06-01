@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from '../../components/admin/admin.component';
-// import { EventContentComponent } from 'src/app/components/event-content/event-content.component';
+import { EventContentComponent } from 'src/app/components/event-content/event-content.component';
 import { EventsListComponent } from 'src/app/components/events-list/events-list.component';
 
 const routes: Routes = [
@@ -10,10 +10,9 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       {path: 'events', component: EventsListComponent},
+      {path: 'events/:id', component: EventContentComponent},
     ]
-  },
-  // {path: 'event-content', component: EventContentComponent},
-  // {path: 'events', component: EventsListComponent},
+  }
 ];
 
 @NgModule({
